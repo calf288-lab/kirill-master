@@ -36,7 +36,6 @@ body{
   -webkit-font-smoothing:antialiased;
   cursor:none;
 }
-/* Mesh gradient background — Origin Kit style */
 .mesh-bg{
   position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:
@@ -50,13 +49,11 @@ body{
   0%{background-position:0% 0%,100% 100%,50% 100%}
   100%{background-position:20% 30%,70% 80%,50% 100%}
 }
-/* Noise overlay */
 body::before{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;
   opacity:.035;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-/* Custom magnetic cursor */
 .cursor-dot,.cursor-ring{
   position:fixed;top:0;left:0;pointer-events:none;z-index:9999;
   border-radius:50%;transform:translate(-50%,-50%);will-change:transform;
@@ -72,14 +69,11 @@ body::before{
 }
 .cursor-ring.hover{width:72px;height:72px;border-color:var(--acc-bright);background:rgba(201,162,75,.04)}
 .cursor-ring.hover-sm{width:56px;height:56px;border-color:var(--acc)}
-
-/* Progress bar — irreplaceable-ai style */
 .progress{
   position:fixed;top:0;left:0;height:2px;width:0;
   background:linear-gradient(90deg,var(--acc),var(--acc-bright));
   z-index:200;transition:width .1s linear;
 }
-/* Chapter indicator */
 .chapter{
   position:fixed;right:32px;top:50%;transform:translateY(-50%);
   z-index:90;font-family:'Inter',monospace;font-size:10px;
@@ -87,15 +81,12 @@ body::before{
   opacity:.6;transition:opacity .3s;
 }
 .chapter b{color:var(--acc)}
-
 h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;line-height:1.15;font-weight:500;letter-spacing:-.02em}
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
 section{padding:80px 0;position:relative}
 h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px;color:var(--txt)}
 .sub{color:var(--muted);margin-bottom:40px;max-width:640px}
 .serif{font-style:italic;color:var(--acc)}
-
-/* Buttons — magnetic */
 .btn{
   display:inline-block;padding:15px 30px;border-radius:10px;
   text-decoration:none;font-weight:600;background:var(--acc);
@@ -116,8 +107,6 @@ h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px;color:var(--txt)}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 .btn-arrow{display:inline-block;transition:transform .35s var(--ease);margin-left:4px}
 .btn:hover .btn-arrow{transform:translateX(5px)}
-
-/* Header */
 header{
   position:sticky;top:0;background:rgba(14,17,22,.85);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
@@ -145,8 +134,6 @@ header.scrolled{background:rgba(14,17,22,.95);box-shadow:0 4px 30px rgba(0,0,0,.
   cursor:none;transition:color .3s;
 }
 .nav-phone:hover{color:var(--acc-bright)}
-
-/* Hero */
 .hero{padding:130px 0 100px;background:linear-gradient(180deg,rgba(20,26,33,.4) 0%,var(--bg) 100%);position:relative;overflow:hidden}
 .hero .tag{
   color:var(--acc);letter-spacing:.35em;font-size:.75rem;
@@ -170,8 +157,6 @@ header.scrolled{background:rgba(14,17,22,.95);box-shadow:0 4px 30px rgba(0,0,0,.
   letter-spacing:.08em;margin-bottom:20px;opacity:0;animation:fadeUp 1s 1.3s forwards;
 }
 .hero-cta{opacity:0;animation:fadeUp 1s 1.9s forwards}
-
-/* Cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--r);
@@ -180,7 +165,7 @@ header.scrolled{background:rgba(14,17,22,.95);box-shadow:0 4px 30px rgba(0,0,0,.
 }
 .card::before{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(201,162,75,.06) 0%,transparent 60%);
+  background:linear-gradient(135deg,rgba(201,162,75,.06) 0%, transparent 60%);
   opacity:0;transition:opacity .5s;z-index:0;
 }
 .card::after{
@@ -199,16 +184,12 @@ header.scrolled{background:rgba(14,17,22,.95);box-shadow:0 4px 30px rgba(0,0,0,.
   display:flex;align-items:baseline;gap:6px;
 }
 .price::before{content:'';width:20px;height:1px;background:var(--acc);align-self:center}
-
-/* Work cards */
 .work img{
   width:100%;height:220px;object-fit:cover;border-radius:10px;
   margin-bottom:18px;transition:transform .7s var(--ease),filter .5s;
   filter:grayscale(20%) contrast(1.05);
 }
 .work .card:hover img{transform:scale(1.03);filter:grayscale(0%) contrast(1.1)}
-
-/* Steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
 .step{
   border-left:2px solid var(--line);padding-left:20px;
@@ -222,8 +203,6 @@ header.scrolled{background:rgba(14,17,22,.95);box-shadow:0 4px 30px rgba(0,0,0,.
 .step:hover{border-color:var(--acc)}
 .step b{display:block;margin-bottom:6px;color:var(--txt);font-size:1.05rem;font-weight:600}
 .step span{color:var(--muted);font-size:.92rem;line-height:1.5}
-
-/* Pricelist banner */
 .pricelist{
   background:linear-gradient(135deg,var(--card) 0%,#1c232b 100%);
   border:1px solid var(--line);border-radius:var(--r);padding:56px 40px;
@@ -236,8 +215,6 @@ header.scrolled{background:rgba(14,17,22,.95);box-shadow:0 4px 30px rgba(0,0,0,.
 }
 @keyframes pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.8;transform:scale(1.1)}}
 .pricelist>*{position:relative;z-index:1}
-
-/* Form */
 form{display:grid;gap:14px;max-width:560px}
 input,textarea,select{
   background:var(--card);border:1px solid var(--line);border-radius:10px;
@@ -251,13 +228,10 @@ input:focus,textarea:focus,select:focus{
 input::placeholder,textarea::placeholder{color:var(--muted)}
 .check{display:flex;gap:12px;color:var(--muted);font-size:.83rem;align-items:flex-start;cursor:none}
 .check input{width:18px;height:18px;margin-top:2px;accent-color:var(--acc);cursor:none}
-
 .mess{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
 .mess .btn{margin:0;flex:1;min-width:200px}
 .geo{margin-top:24px;color:var(--muted);font-size:.9rem;letter-spacing:.04em}
-
 footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.84rem;text-align:center}
-
 .form-success{
   display:none;background:var(--card);border:1px solid var(--acc);
   border-radius:var(--r);padding:36px;text-align:center;
@@ -265,8 +239,6 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 .form-success.show{display:block;animation:fadeUp .6s var(--ease)}
 .form-success b{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--acc);display:block;margin-bottom:10px;font-weight:500}
 .form-success p{color:var(--muted)}
-
-/* Mobile sticky bar */
 .mobile-bar{
   display:none;position:fixed;bottom:0;left:0;right:0;z-index:95;
   background:rgba(14,17,22,.95);backdrop-filter:blur(14px);
@@ -279,30 +251,23 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 }
 .mobile-bar a.primary{background:var(--acc);color:#0e1116}
 .mobile-bar a.ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
-
-/* Reveal animations */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-d1{transition-delay:.1s}
 .reveal-d2{transition-delay:.2s}
 .reveal-d3{transition-delay:.3s}
 .reveal-d4{transition-delay:.4s}
-
 @keyframes wordReveal{to{transform:translateY(0)}}
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(30px)}
   to{opacity:1;transform:translateY(0)}
 }
-
-/* Section label */
 .sec-label{
   font-family:'Inter',monospace;font-size:11px;letter-spacing:.3em;
   text-transform:uppercase;color:var(--acc);display:flex;
   align-items:center;gap:14px;margin-bottom:18px;font-weight:500;
 }
 .sec-label::before{content:'';width:32px;height:1px;background:var(--acc)}
-
-/* Responsive */
 @media(max-width:900px){
   .nav-links{display:none}
   .chapter{display:none}
@@ -447,7 +412,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     <p class="sub reveal reveal-d2">Реальные объекты в СПб и ЛО</p>
     <div class="grid work">
       <div class="card reveal reveal-d1" data-hover>
-        <img loading="lazy" src="kfoto1.jpg" alt="Укладка плитки — кухонный фартук">
+        <img loading="lazy" src="kfoto5.jpg" alt="Укладка плитки — кухонный фартук">
         <h3>Укладка плитки</h3>
         <p>Керамогранит, выравнивание, затирка.</p>
       </div>
@@ -467,7 +432,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
         <p>Натяжной потолок, трековые светильники.</p>
       </div>
       <div class="card reveal reveal-d1" data-hover>
-        <img loading="lazy" src="kfoto5.jpg" alt="Ванная премиум">
+        <img loading="lazy" src="https://image.qwenlm.ai/public_source/a9867383-cb6c-4410-8bc2-11306017d1c3/45e2275b9-649a-4be2-9341-419d1d79d2473765.png" alt="Ванная премиум">
         <h3>Ванная премиум</h3>
         <p>Керамогранит под мрамор, подсветка, сантехника.</p>
       </div>
@@ -512,6 +477,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     <div class="sec-label reveal">06 · Контакт</div>
     <h2 class="reveal reveal-d1">Получить расчёт</h2>
     <p class="sub reveal reveal-d2">Перезвоню в течение часа в рабочее время</p>
+    <!-- TODO: заменить mwlebokk на Formspree ID Кирилла, когда пришлёт -->
     <form id="lead-form" class="reveal reveal-d3" novalidate>
       <input type="text" name="name" placeholder="Ваше имя" required>
       <input type="tel" name="phone" placeholder="Телефон" required pattern="[+\d\s\-()]{10,}">
@@ -520,6 +486,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
       <button class="btn" type="submit" data-hover>Отправить заявку <span class="btn-arrow">→</span></button>
     </form>
     <div class="form-success" id="form-success"><b>Заявка отправлена!</b><p>Перезвоню в течение часа в рабочее время.</p></div>
+    <!-- TODO: добавить MAX (ссылка от Кирилла) и домен, когда подтвердит -->
     <div class="mess reveal reveal-d4">
       <a class="btn" href="tel:+79304259671" data-hover>📞 Позвонить</a>
       <a class="btn ghost" href="https://wa.me/79304259671" target="_blank" data-hover>WhatsApp</a>
@@ -541,11 +508,9 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 
 <script>
 (function(){
-  // Custom magnetic cursor — Origin Kit style
   const dot=document.getElementById('cursorDot');
   const ring=document.getElementById('cursorRing');
   let mx=0,my=0,rx=0,ry=0;
-  
   if(window.matchMedia('(pointer:fine)').matches){
     document.addEventListener('mousemove',e=>{
       mx=e.clientX;my=e.clientY;
@@ -557,7 +522,6 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
       requestAnimationFrame(anim);
     }
     anim();
-    
     document.querySelectorAll('[data-hover],.btn,a,button').forEach(el=>{
       el.addEventListener('mouseenter',()=>{
         if(el.classList.contains('btn'))ring.classList.add('hover');
@@ -573,22 +537,14 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
       el.addEventListener('mouseleave',()=>el.style.transform='');
     });
   }
-
-  // Scroll progress
   const prog=document.getElementById('progress');
   const chap=document.getElementById('chapter');
   const sections=document.querySelectorAll('[data-section]');
-  
   window.addEventListener('scroll',()=>{
     const scrolled=window.scrollY;
     const height=document.documentElement.scrollHeight-window.innerHeight;
-    const percent=(scrolled/height)*100;
-    prog.style.width=percent+'%';
-    
-    // Header state
+    prog.style.width=(scrolled/height)*100+'%';
     document.getElementById('header').classList.toggle('scrolled',scrolled>50);
-    
-    // Chapter indicator
     let current='01';
     sections.forEach(s=>{
       const rect=s.getBoundingClientRect();
@@ -596,16 +552,12 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     });
     chap.innerHTML=`<b>${current}</b>&nbsp;/&nbsp;07`;
   });
-
-  // Scroll reveal — Origin Kit style
   const revealObs=new IntersectionObserver((entries)=>{
     entries.forEach(en=>{
       if(en.isIntersecting)en.target.classList.add('visible');
     });
   },{threshold:.12,rootMargin:'0px 0px -50px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
-
-  // Form submit
   const form=document.getElementById('lead-form');
   const ok=document.getElementById('form-success');
   form.addEventListener('submit',function(e){
@@ -614,7 +566,6 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     btn.disabled=true;
     const origText=btn.innerHTML;
     btn.innerHTML='Отправка... <span class="btn-arrow">→</span>';
-    
     fetch('https://formspree.io/f/mwlebokk',{
       method:'POST',body:new FormData(form),
       headers:{Accept:'application/json'}
