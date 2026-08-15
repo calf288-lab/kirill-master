@@ -229,7 +229,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
 .check{display:flex;gap:12px;color:var(--muted);font-size:.83rem;align-items:flex-start;cursor:none}
 .check input{width:18px;height:18px;margin-top:2px;accent-color:var(--acc);cursor:none}
 .mess{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
-.mess .btn{margin:0;flex:1;min-width:200px}
+.mess .btn{margin:0;flex:1;min-width:140px}
 .geo{margin-top:24px;color:var(--muted);font-size:.9rem;letter-spacing:.04em}
 footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.84rem;text-align:center}
 .form-success{
@@ -477,7 +477,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     <div class="sec-label reveal">06 · Контакт</div>
     <h2 class="reveal reveal-d1">Получить расчёт</h2>
     <p class="sub reveal reveal-d2">Перезвоню в течение часа в рабочее время</p>
-    <!-- TODO: заменить mwlebokk на Formspree ID Кирилла, когда пришлёт -->
+    <!-- TODO: заменить mwlebokk на Formspree ID Кирилла, когда пришлёт почту -->
     <form id="lead-form" class="reveal reveal-d3" novalidate>
       <input type="text" name="name" placeholder="Ваше имя" required>
       <input type="tel" name="phone" placeholder="Телефон" required pattern="[+\d\s\-()]{10,}">
@@ -486,10 +486,10 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
       <button class="btn" type="submit" data-hover>Отправить заявку <span class="btn-arrow">→</span></button>
     </form>
     <div class="form-success" id="form-success"><b>Заявка отправлена!</b><p>Перезвоню в течение часа в рабочее время.</p></div>
-    <!-- TODO: добавить MAX (ссылка от Кирилла) и домен, когда подтвердит -->
     <div class="mess reveal reveal-d4">
       <a class="btn" href="tel:+79304259671" data-hover>📞 Позвонить</a>
       <a class="btn ghost" href="https://wa.me/79304259671" target="_blank" data-hover>WhatsApp</a>
+      <a class="btn ghost" href="https://max.ru/u/f9LHodD0cOLJZrb6cbzWm9VupyJp26_tivs8q0mmwQiBVioRqoTbwBddwQA" target="_blank" data-hover>MAX</a>
     </div>
     <p class="geo reveal">Санкт-Петербург · Ленинградская область</p>
   </div>
