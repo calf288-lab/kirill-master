@@ -236,7 +236,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
 .check{display:flex;gap:12px;color:var(--muted);font-size:.83rem;align-items:flex-start;cursor:none}
 .check input{width:18px;height:18px;margin-top:2px;accent-color:var(--acc);cursor:none}
 .mess{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
-.mess .btn{margin:0;flex:1;min-width:200px}
+.mess .btn{margin:0;flex:1;min-width:160px}
 .geo{margin-top:24px;color:var(--muted);font-size:.9rem;letter-spacing:.04em}
 footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.84rem;text-align:center}
 .form-success{
@@ -274,7 +274,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   opacity:.15;line-height:1;
 }
 .review-card p{font-size:1rem;color:var(--txt);font-style:italic;margin-bottom:16px}
-.review-author{display:flex;align-items:center;gap:12px}
+.review-author{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .review-author b{color:var(--acc);font-size:.9rem}
 .review-author span{color:var(--muted);font-size:.85rem}
 @keyframes wordReveal{to{transform:translateY(0)}}
@@ -472,27 +472,48 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   <div class="container">
     <div class="sec-label reveal">04 · Отзывы</div>
     <h2 class="reveal reveal-d1">Что говорят клиенты</h2>
-    <p class="sub reveal reveal-d2">Реальные отзывы после сдачи объектов</p>
+    <p class="sub reveal reveal-d2">Реальные отзывы из профиля на Авито</p>
     <div class="grid">
       <div class="review-card reveal reveal-d1">
-        <p>Делали ремонт в новостройке под ключ. Кирилл всё объяснил по смете, ни одного сюрприза в процессе. Сдали в срок, качество отличное — плитка идеальная, сантехника работает без нареканий.</p>
+        <p>Кирилл: аккуратный и ответственный! Работу сделал быстро, а главное качественно! Посоветую всем! Идеально!</p>
         <div class="review-author">
-          <b>Алексей М.</b>
-          <span>2-к квартира, Приморский район</span>
+          <b>Игорь</b>
+          <span>Авито · февраль 2025</span>
         </div>
       </div>
       <div class="review-card reveal reveal-d2">
-        <p>Заказывала ванную комнату — от демонтажа до финальной затирки. Работали аккуратно, мусор вывозили каждый день. Результатом очень довольна, рекомендую!</p>
+        <p>Кирилл мастер своего дела, делает качественно и быстро. Всем советую, обращайтесь.</p>
         <div class="review-author">
-          <b>Елена К.</b>
-          <span>Ванная под ключ, Выборгский район</span>
+          <b>Юрий Шубин</b>
+          <span>Авито · февраль 2025</span>
         </div>
       </div>
       <div class="review-card reveal reveal-d3">
-        <p>Обращался по электрике и потолкам. Профессиональный подход, всё по договору. Цена не изменилась ни на рубль, как и обещали. Буду обращаться снова.</p>
+        <p>Выражаю благодарность за проделанную работу! Все было качественно и быстро: от стен до полов, потолков, санузла. Спасибо большое, буду обращаться ещё.</p>
         <div class="review-author">
-          <b>Дмитрий В.</b>
-          <span>Частный дом, Всеволожск</span>
+          <b>Арсений Пянтелев</b>
+          <span>Авито · январь 2025</span>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-d1">
+        <p>Работа по обновлению санузла в квартире была выполнена в срок, с отличным качеством. Рекомендую мастера — не пожалеете. Спасибо!</p>
+        <div class="review-author">
+          <b>Алина</b>
+          <span>Авито · февраль 2025</span>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-d2">
+        <p>Мастер оперативно отреагировал на заявку, быстро договорились, всё сделали хорошо. Спасибо.</p>
+        <div class="review-author">
+          <b>Алексей</b>
+          <span>Авито · февраль 2025</span>
+        </div>
+      </div>
+      <div class="review-card reveal reveal-d3">
+        <p>Работа выполнена быстро, качественно и в срок! Мастер дал очень ценные советы по ремонту, очень аккуратно проделал работу. Рекомендую!</p>
+        <div class="review-author">
+          <b>Анастасия</b>
+          <span>Авито · февраль 2025</span>
         </div>
       </div>
     </div>
@@ -629,7 +650,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     const origText=btn.innerHTML;
     btn.innerHTML='Отправка... <span class="btn-arrow">→</span>';
 
-    fetch('https://formspree.io/f/mwlebokk',{
+    fetch('https://formspree.io/f/xdenwoyk',{
       method:'POST',body:new FormData(form),
       headers:{Accept:'application/json'}
     }).then(r=>{
